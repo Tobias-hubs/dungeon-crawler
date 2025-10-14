@@ -31,5 +31,5 @@ The project is a turn‑based CLI game built in Java, featuring a randomly gener
 ## Additional Notes
 - Removed unused classes and commented out debug prints for a clean submission.
 - All four unit tests pass successfully. 
-- Issue
+- School assignment Issue
 [Exercise 2 - Dungeon Crawler](https://github.com/fungover/exercise2025/issues/6)
