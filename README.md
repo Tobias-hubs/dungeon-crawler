@@ -1,36 +1,35 @@
-## 🧪 How to Work on the Exercises
+## Summary
+This PR completes the implementation of the **Exercise 2 – Dungeon Crawler** game according to the assignment requirements.  
+The project is a turn‑based CLI game built in Java, featuring a randomly generated dungeon, multiple enemy types, items, and a player inventory system.
 
-Each exercise is described in a GitHub Issue. Follow these steps to complete an exercise and submit your solution:
+## Key Features
 
-### 📥 1. Clone or Fork the Repository
-```bash
-git clone https://github.com/fungover/exercise2025.git
-```
-Or fork the repository via GitHub and clone your fork.
+### 🧩 OOP Principles
+- **Encapsulation**: Private/protected fields with getters/setters; inventory managed via dedicated methods.
+- **Inheritance**: `Player` and `Enemy` extend `Character`; multiple enemy subclasses (`Goblin`, `Ghost`, `Troll`, `Dragon`).
+- **Polymorphism**: Abstract methods (`getAttackDamage`, `takeTurn`) overridden in subclasses; `Combat` works with `Character` references.
 
-### 🌱 2. Create a Branch
-Create a new branch named using the format: your-github-username/exerciseNumber
+### 🗺 Dungeon Map
+- `DungeonGrid` with walls, floor tiles, and printed map view.
 
-Example for user githubuser working on Exercise 1:
+### 🎲 Random Generation
+- `RandomGeneration` ensures valid placement of enemies and items.
 
-```bash
-git checkout -b githubuser/exercise1
-```
+### ⚔ Game Mechanics
+- Movement with collision detection.
+- Combat system with both interactive (`start`) and test‑friendly (`doAttack`) modes.
+- Inventory management and item usage (`HealthPotion`).
 
-### 🛠️ 3. Implement Your Solution
-Follow the instructions in the corresponding issue. If anything is unclear, ask questions by commenting directly on the issue.
+### 🧪 Testing (JUnit 5)
+1. **Movement logic** – verifies player cannot move through walls.  
+2. **Combat calculations** – verifies enemy HP decreases after attack.  
+3. **Item effects** – verifies potion use increases player HP.  
+4. **Map generation** – verifies random positions are in‑bounds and not walls.
 
-### 🚀 4. Push Your Branch
-```bash
-git push origin githubuser/exercise1
-```
+---
 
-### 📬 5. Create a Pull Request
-Open a Pull Request (PR) from your branch.
-
-Link the PR to the issue you're solving.
-
-Include a clear description of your solution.
-
-### 💬 6. Feedback and Iteration
-Reviewers may leave comments or suggestions. Update your branch and push changes until the PR is approved.
+## Additional Notes
+- Removed unused classes and commented out debug prints for a clean submission.
+- All four unit tests pass successfully. 
+- Issue
+[Exercise 2 - Dungeon Crawler](https://github.com/fungover/exercise2025/issues/6)
